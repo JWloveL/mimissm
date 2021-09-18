@@ -2,16 +2,15 @@ package com.bjpowernode.mapper;
 
 import com.bjpowernode.pojo.Admin;
 import com.bjpowernode.pojo.AdminExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 public interface AdminMapper {
-    int countByExample(AdminExample example);
+    long countByExample(AdminExample example);
 
     int deleteByExample(AdminExample example);
 
-    int deleteByPrimaryKey(Integer aId);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Admin record);
 
@@ -19,7 +18,7 @@ public interface AdminMapper {
 
     List<Admin> selectByExample(AdminExample example);
 
-    Admin selectByPrimaryKey(Integer aId);
+    Admin selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Admin record, @Param("example") AdminExample example);
 

@@ -1,33 +1,33 @@
 package com.bjpowernode.pojo;
 
 public class Admin {
-    private Integer aId;
+    private Integer id;
 
-    private String aName;
+    private String username;
 
-    private String aPass;
+    private String password;
 
-    public Integer getaId() {
-        return aId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setaId(Integer aId) {
-        this.aId = aId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getaName() {
-        return aName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setaName(String aName) {
-        this.aName = aName == null ? null : aName.trim();
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
-    public String getaPass() {
-        return aPass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setaPass(String aPass) {
-        this.aPass = aPass == null ? null : aPass.trim();
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 }

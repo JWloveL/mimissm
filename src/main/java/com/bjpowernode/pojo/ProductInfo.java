@@ -4,12 +4,19 @@ import java.util.Date;
 
 public class ProductInfo {
     private Integer pId;
+
     private String pName;
+
     private String pContent;
+
     private Integer pPrice;
+
     private String pImage;
+
     private Integer pNumber;
+
     private Integer typeId;
+
     private Date pDate;
 
     public Integer getpId() {
@@ -74,19 +81,5 @@ public class ProductInfo {
 
     public void setpDate(Date pDate) {
         this.pDate = pDate;
-    }
-
-    @Override
-    public String toString() {
-        return "ProductInfo{" +
-                "pId=" + pId +
-                ", pName='" + pName + '\'' +
-                ", pContent='" + pContent + '\'' +
-                ", pPrice=" + pPrice +
-                ", pImage='" + pImage + '\'' +
-                ", pNumber=" + pNumber +
-                ", typeId=" + typeId +
-                ", pDate=" + pDate +
-                '}';
     }
 }

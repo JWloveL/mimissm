@@ -2,12 +2,11 @@ package com.bjpowernode.mapper;
 
 import com.bjpowernode.pojo.ProductType;
 import com.bjpowernode.pojo.ProductTypeExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 public interface ProductTypeMapper {
-    int countByExample(ProductTypeExample example);
+    long countByExample(ProductTypeExample example);
 
     int deleteByExample(ProductTypeExample example);
 

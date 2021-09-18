@@ -12,5 +12,6 @@
     <!--配置文件上傳核心組件-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
     <!--设置注解驱动-->
+
     <mvc:annotation-driven/>
 </beans>

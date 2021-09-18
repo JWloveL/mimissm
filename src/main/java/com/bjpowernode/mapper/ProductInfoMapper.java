@@ -2,13 +2,11 @@ package com.bjpowernode.mapper;
 
 import com.bjpowernode.pojo.ProductInfo;
 import com.bjpowernode.pojo.ProductInfoExample;
-import com.bjpowernode.pojo.vo.ProductInfoVo;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 public interface ProductInfoMapper {
-    int countByExample(ProductInfoExample example);
+    long countByExample(ProductInfoExample example);
 
     int deleteByExample(ProductInfoExample example);
 
@@ -29,12 +27,4 @@ public interface ProductInfoMapper {
     int updateByPrimaryKeySelective(ProductInfo record);
 
     int updateByPrimaryKey(ProductInfo record);
-
-
-    //批量删除商品的功能
-    int deleteBatch(String []ids);
-
- //多条件查询商品
-    List<ProductInfo> selectCondition(ProductInfoVo vo);
-
 }
