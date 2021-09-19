@@ -16,4 +16,6 @@ public interface ProductInfoService {
 
     //按主键id查询的方法
     ProductInfo getByID(int pid);
+
+    int update(ProductInfo info);
 }

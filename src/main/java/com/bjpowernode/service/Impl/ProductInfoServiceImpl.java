@@ -45,4 +45,9 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     public ProductInfo getByID(int pid) {
         return productInfoMapper.selectByPrimaryKey(pid);
     }
+
+    @Override
+    public int update(ProductInfo info) {
+        return productInfoMapper.updateByPrimaryKey(info);
+    }
 }

@@ -97,4 +97,27 @@ public class ProductInfoAction {
         model.addAttribute("prod",info);
         return "update";
     }
+
+    @RequestMapping("/update")
+    public String update(ProductInfo info,Model model){
+
+        if (!saveFileName.equals("")){
+            info.setpImage(saveFileName);
+        }
+
+        int num=-1;
+        num = productInfoService.update(info);
+
+        if (num>0){
+            model.addAttribute("msg","更新成功");
+        }
+        else {
+            model.addAttribute("msg","更新失败");
+        }
+
+        //处理完更新后，saveFileName里有可能有数据，而下一次更新时要使用这个变量作为判断的依据，就会出错，所以必须清空saveFileName
+        saveFileName="";
+        return "redirect:/prod/split.action";
+
+    }
 }
